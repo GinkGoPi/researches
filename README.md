@@ -1,1 +1,1 @@
-# What-Lens-protocol
+# How Lens protocol to work
