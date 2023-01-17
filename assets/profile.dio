@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram id="rktGvPDQpEPL0cokE06l" name="Profile-struct">
+        <mxGraphModel dx="1925" dy="1124" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="16" value="ProfileStruct" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#333333;strokeColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="-160" width="160" height="182" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="+ pubCount: uint256" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="16" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="+ followModule: address" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="16" vertex="1">
+                    <mxGeometry y="52" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="+ followNFT: address" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="16" vertex="1">
+                    <mxGeometry y="78" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="+ handle: string" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="16" vertex="1">
+                    <mxGeometry y="104" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="+ imageURI: string" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="16" vertex="1">
+                    <mxGeometry y="130" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="+ followNFTURI: string" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="16" vertex="1">
+                    <mxGeometry y="156" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="LensHubStorage" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#333333;strokeColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="160" width="520" height="312" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="mapping(address=&gt;bool) internal _profileCreatorWhitelisted" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="26" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="mapping(address =&gt; bool) internal _followModuleWhitelisted" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="52" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="mapping(address =&gt; bool) internal _referenceModuleWhitelisted" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="78" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="mapping(uint256 =&gt; address) internal _dispatcherByProfile" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="104" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="mapping(bytes32 =&gt; uint256) internal _profileIdByHandleHash" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="130" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="mapping(uint256 =&gt; DataTypes.ProfileStruct) internal _profileById" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="156" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="mapping(uint256 =&gt; mapping(uint256 =&gt; DataTypes.ProfileStruct)) internal _pubByIdByProfile" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="182" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="mapping(uint256 =&gt; uint256) internal _defaultProfileByAddress" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="208" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="_profileCounter: uint256" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="234" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="_governance: address" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="260" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="_emergencyAdmin: address" style="text;strokeColor=#333333;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="23" vertex="1">
+                    <mxGeometry y="286" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;LenHub&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;whitelistProfileCreator(address profileCreator, bool whitelist)&lt;br&gt;whitelistFollowModule(address followModule, bool whitelist)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;whitelistCollectModule(address collectModule, bool whitelist)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;whitelistReferenceModule(address referenceModule, bool whitelist&lt;span&gt;)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;span&gt;createProfile(DataTypes.CreateProfileData calldata vars): uint256&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setDefaultProfile(uint256 profileId)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setDefaultProfileWithSig(DataTypes.SetDefaultProfileWithSigData calldata vars)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setFollowModule(uint256 profileId, address followModule, bytes calldata followModuleInitData)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setFollowModuleWithSig(datatypes.setFollowModuleWithSigData calldata vars)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setDispatcher(uint256 profileId, address dispatcher)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setDispatcherWithSig(DataTypes.setDispatcherWithSigData calldata vars)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setProfileImageURI(uint256 profileId, string calldata imageURI)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setProfileImageURIWithSig(DataTypes.setProfileImageURIWithSigData calldata vars)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setFollowNFTURI(uint256 profileId, string calldata followNFTURI)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;setFollowNFTURIWithSig(DataTypes.setFollowNFTURIWithSig calldata vars)&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;fontColor=#333333;strokeColor=#333333;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-400" y="-40" width="520" height="290" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
